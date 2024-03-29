@@ -17,36 +17,31 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh; /* Updated to ensure the page takes at least the height of the viewport */
     }
-    h1 {
-      font-size: 2.5em;
-      color: #007bff;
-      margin: 30px 0;
+    header {
+      background-color: #007bff;
+      color: #fff;
+      padding: 20px 0;
       text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      animation: fadeInDown 1s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      animation: fadeInDown 1s ease; /* Added animation for header */
     }
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
+    nav {
+      background-color: #fff;
+      padding: 10px 0;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 1s ease; /* Added animation for navigation */
     }
-    nav ul li {
-      margin-right: 20px;
-    }
-    nav ul li a {
+    nav a {
       text-decoration: none;
-      color: #007bff;
-      font-size: 1.2em;
-      transition: all 0.3s ease;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      color: #333;
+      margin: 0 20px;
+      transition: all 0.3s ease-in-out;
     }
-    nav ul li a:hover {
-      color: #0056b3;
+    nav a:hover {
+      color: #007bff;
     }
     table {
       width: 80%;
@@ -55,7 +50,7 @@
       border-spacing: 0;
       border: 2px solid #007bff;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      animation: fadeInUp 1s ease;
+      animation: fadeInUp 1s ease; /* Added animation for table */
     }
     th, td {
       padding: 12px 15px;
@@ -89,14 +84,12 @@
     <h1 class="animate__animated animate__fadeInDown">Fee Payment Structure</h1>
   </header>
   <nav>
-    <ul>
-      <li><a href="index.html" class="animate__animated animate__fadeInUp">Home</a></li>
-      <li><a href="subjects.html" class="animate__animated animate__fadeInUp">Subjects</a></li>
-      <li><a href="enrollment.html" class="animate__animated animate__fadeInUp">Enrollment</a></li>
-      <li><a href="contact.html" class="animate__animated animate__fadeInUp">Contact Us</a></li>
-    </ul>
+    <a href="index.html" class="animate__animated animate__fadeInUp">Home</a>
+    <a href="subjects.html" class="animate__animated animate__fadeInUp">Subjects</a>
+    <a href="enrollment.html" class="animate__animated animate__fadeInUp">Enrollment</a>
+    <a href="contact.html" class="animate__animated animate__fadeInUp">Contact Us</a>
   </nav>
-  <table>
+  <table class="animate__animated animate__fadeInUp">
     <caption>Fee Payment Structure</caption>
     <thead>
       <tr>
