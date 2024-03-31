@@ -3,13 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enrollment | IGCSE Tutoring</title>
+  <title>Enrollment - IGCSE Tutoring</title>
   <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> <!-- Link to Animate.css -->
   <style>
     /* Additional Styles for Enrollment Page */
     body {
-      background-color: #f9f9f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh; /* Updated to ensure the page takes at least the height of the viewport */
     }
     header {
       background-color: #007bff;
@@ -17,6 +25,8 @@
       padding: 20px 0;
       text-align: center;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 100%; /* Make the header take the full width */
+      box-sizing: border-box; /* Include padding in the width calculation */
     }
     nav {
       background-color: #fff;
@@ -36,13 +46,14 @@
     section {
       padding: 50px 20px;
       text-align: center;
+      animation: fadeInUp 1s ease; /* Added animation for section */
     }
     section h2 {
       font-size: 2.5em;
       margin-bottom: 30px;
       color: #007bff;
     }
-    section p {
+    p {
       font-size: 1.1em;
       margin-bottom: 20px;
     }
@@ -61,63 +72,28 @@
     .btn:hover {
       background-color: #0056b3;
     }
-    .enrollment-form {
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 40px;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-    .form-group {
-      margin-bottom: 20px;
-      text-align: left;
-    }
-    .form-label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-    .form-input {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1em;
-    }
-    .form-input:focus {
-      outline: none;
-      border-color: #007bff;
-    }
   </style>
 </head>
 <body>
   <header class="animate__animated animate__fadeInDown">
-    <h1>Enrollment</h1>
+    <h1>Enrollment - IGCSE Tutoring</h1>
   </header>
   <nav>
     <a href="index.html">Home</a>
     <a href="subjects.html">Subjects</a>
-    <a href="index.html#contact">Contact Us</a>
+    <a href="#contact">Contact Us</a>
     <a href="enrollment.html">Enroll Now</a>
     <a href="fee.html">Fee Structure</a>
   </nav>
-  <section id="enrollment" class="animate__animated animate__fadeInUp">
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enrollment Page</title>
-</head>
-<body>
-  <h1>Enrollment Form</h1>
-  
-  <!-- Embed Google Form using iframe -->
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf3ri5CgMpi-LMNjbnbRbV8z5pD7G7U7Dqd7r0dRDk3kkq9UA/viewform?embedded=true" width="640" height="1293" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-</body>
+  <section id="enroll">
+    <h2>Enroll Now</h2>
+    <p>Fill out the form below to enroll in our tutoring program.</p>
+    <!-- Add Google Form here -->
   </section>
-  
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or need assistance? Contact us via email at <a href="mailto:info@igcsetutoring.com">info@igcsetutoring.com</a>.</p>
+    <!-- Add contact form here -->
+  </section>
 </body>
-  
-</body>
-  
 </html>
