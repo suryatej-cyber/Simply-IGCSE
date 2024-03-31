@@ -8,12 +8,25 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> <!-- Link to Animate.css -->
   <style>
     /* Additional Styles for Index Page */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh; /* Updated to ensure the page takes at least the height of the viewport */
+    }
     header {
       background-color: #007bff;
       color: #fff;
       padding: 20px 0;
       text-align: center;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 100%; /* Make the header take the full width */
+      box-sizing: border-box; /* Include padding in the width calculation */
     }
     nav {
       background-color: #fff;
@@ -33,13 +46,14 @@
     section {
       padding: 50px 20px;
       text-align: center;
+      animation: fadeInUp 1s ease; /* Added animation for section */
     }
     section h2 {
       font-size: 2.5em;
       margin-bottom: 30px;
       color: #007bff;
     }
-    section p {
+    p {
       font-size: 1.1em;
       margin-bottom: 20px;
     }
@@ -58,19 +72,6 @@
     .btn:hover {
       background-color: #0056b3;
     }
-    footer {
-      background-color: #007bff;
-      color: #fff;
-      text-align: center;
-      padding: 20px 0;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    }
-    footer p {
-      font-size: 0.9em;
-    }
   </style>
 </head>
 <body>
@@ -78,34 +79,33 @@
     <h1>IGCSE Tutoring</h1>
   </header>
   <nav>
-    <a href="#about">Home</a> <!-- Updated link to scroll to the about section -->
-    <a href="subjects.html">Subjects</a> <!-- Updated link to scroll to the subjects section -->
+    <a href="#about">Home</a>
+    <a href="subjects.html">Subjects</a>
     <a href="#contact">Contact Us</a>
     <a href="enrollment.html">Enroll Now</a>
     <a href="fee.html">Fee Structure</a>
   </nav>
-  <section id="about" class="animate__animated animate__fadeInUp">
+  <section id="about">
     <h2>About Us</h2>
     <p>Welcome to <strong>IGCSE Tutoring</strong>! We specialize in helping students excel in their IGCSE exams through personalized tutoring sessions.</p>
     <p>Our experienced tutors are dedicated to providing tailored support to meet the individual needs of each student.</p>
-    <a href="subjects.html" class="btn">Explore Subjects</a> <!-- Updated to link to subjects.html -->
+    <a href="subjects.html" class="btn">Explore Subjects</a>
   </section>
-  <section id="subjects" class="animate__animated animate__fadeInUp" style="background-color: #fff;">
+  <section id="subjects" style="background-color: #fff;">
     <h2>Subjects</h2>
     <ul style="list-style: none; padding: 0; margin-top: 20px;">
-      <li id="mathematics"><strong>Mathematics</strong></li> <!-- Added ID for Mathematics -->
-      <li id="physics"><strong>Physics</strong></li> <!-- Added ID for Physics -->
-      <li id="chemistry"><strong>Chemistry</strong></li> <!-- Added ID for Chemistry -->
-      <li id="biology"><strong>Biology</strong></li> <!-- Added ID for Biology -->
-      <li id="english_language"><strong>English Language</strong></li> <!-- Added ID for English Language -->
-      <li id="ict"><strong>ICT (Information and Communication Technology)</strong></li> <!-- Added ID for ICT -->
+      <li id="mathematics"><a href="#mathematics"><strong>Mathematics</strong></a></li>
+      <li id="physics"><a href="#physics"><strong>Physics</strong></a></li>
+      <li id="chemistry"><a href="#chemistry"><strong>Chemistry</strong></a></li>
+      <li id="biology"><a href="#biology"><strong>Biology</strong></a></li>
+      <li id="english_language"><a href="#english_language"><strong>English Language</strong></a></li>
+      <li id="ict"><a href="#ict"><strong>ICT (Information and Communication Technology)</strong></a></li>
     </ul>
   </section>
-  <section id="contact" class="animate__animated animate__fadeInUp">
+  <section id="contact">
     <h2>Contact Us</h2>
     <p>Have questions or need assistance? Contact us via email at <a href="mailto:info@igcsetutoring.com">info@igcsetutoring.com</a>.</p>
     <!-- Add contact form here -->
   </section>
-  
 </body>
 </html>
