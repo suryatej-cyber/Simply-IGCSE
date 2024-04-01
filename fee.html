@@ -3,13 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <title>Fee Structure - IGCSE Tutoring</title>
   <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> <!-- Link to Animate.css -->
   <style>
-    /* Additional Styles for Enrollment Page */
+    /* Additional Styles for Fee Page */
     body {
-      background-color: #f9f9f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh; /* Updated to ensure the page takes at least the height of the viewport */
     }
     header {
       background-color: #007bff;
@@ -17,6 +25,8 @@
       padding: 20px 0;
       text-align: center;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 100%; /* Make the header take the full width */
+      box-sizing: border-box; /* Include padding in the width calculation */
     }
     nav {
       background-color: #fff;
@@ -36,103 +46,87 @@
     section {
       padding: 50px 20px;
       text-align: center;
+      animation: fadeInUp 1s ease; /* Added animation for section */
     }
     section h2 {
       font-size: 2.5em;
       margin-bottom: 30px;
       color: #007bff;
     }
-    section p {
+    p {
       font-size: 1.1em;
       margin-bottom: 20px;
     }
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      font-size: 1.1em;
+    .fee-table {
+      width: 80%;
+      margin: 0 auto;
+      border-collapse: collapse;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .fee-table caption {
+      font-size: 1.5em;
+      padding: 10px;
       background-color: #007bff;
       color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
-      text-decoration: none;
     }
-    .btn:hover {
-      background-color: #0056b3;
+    .fee-table thead {
+      background-color: #007bff;
+      color: #fff;
     }
-    .enrollment-form {
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 40px;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-    .form-group {
-      margin-bottom: 20px;
-      text-align: left;
-    }
-    .form-label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-    .form-input {
-      width: 100%;
+    .fee-table th,
+    .fee-table td {
       padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1em;
+      border-bottom: 1px solid #dee2e6;
     }
-    .form-input:focus {
-      outline: none;
-      border-color: #007bff;
+    .fee-table tbody tr:nth-child(even) {
+      background-color: #f8f9fa;
     }
-  </style>
-</head>
-
-
-  
-    
+    .fee-table tbody tr:hover {
+      background-color: #e9ecef;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1 class="animate__animated animate__fadeInDown">Fee Payment Structure</h1>
+  <header class="animate__animated animate__fadeInDown">
+    <h1>Fee Structure - IGCSE Tutoring</h1>
   </header>
   <nav>
-    <a href="index.html" class="animate__animated animate__fadeInUp">Home</a>
-    <a href="testinggpt" class="animate__animated animate__fadeInUp">Subjects</a>
-    <a href="enrollment.html" class="animate__animated animate__fadeInUp">Enrollment</a>
-    <a href="index.html#contacts" class="animate__animated animate__fadeInUp">Contact Us</a>
-    <a href="fee.html" class="animate__animated animate__fadeInUp">Fee</a>
+    <a href="index.html">Home</a>
+    <a href="subjects.html">Subjects</a>
+    <a href="#contact">Contact Us</a>
+    <a href="enrollment.html">Enroll Now</a>
+    <a href="fee.html">Fee Structure</a>
   </nav>
-  <table class="animate__animated animate__fadeInUp">
-    <caption>Fee Payment Structure</caption>
-    <thead>
-      <tr>
-        <th>Grade Level</th>
-        <th>Admission Fee</th>
-        <th>Tuition Fee (per month)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Grade 9 - 10</td>
-        <td>20rs</td>
-        <td>120rs</td>
-      </tr>
-      <tr>
-        <td>Grade 6 - 8</td>
-        <td>20rs</td>
-        <td>100rs</td>
-      </tr>
-    </tbody>
-  </table>
-  
+  <section>
+    <table class="fee-table">
+      <caption>Fee Payment Structure</caption>
+      <thead>
+        <tr>
+          <th>Grade Level</th>
+          <th>Admission Fee</th>
+          <th>Tuition Fee (per month)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Grade 9 - 10</td>
+          <td>20rs</td>
+          <td>120rs</td>
+        </tr>
+        <tr>
+          <td>Grade 6 - 8</td>
+          <td>20rs</td>
+          <td>100rs</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or need assistance? Contact us via email at <a href="mailto:info@igcsetutoring.com">info@igcsetutoring.com</a>.</p>
+    <!-- Add contact form here -->
+  </section>
 </body>
-  
-
-  
 </html>
